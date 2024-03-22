@@ -1,0 +1,21 @@
+.title {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 120%;
+  color: #42567a;
+  position: relative;
+  max-width: 430px;
+  padding-left: 5%;
+}
+.title::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 90%;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: linear-gradient(to bottom, #3877EE, #EF5DA8);
+}
+
+/*# sourceMappingURL=Title.module.css.map */
