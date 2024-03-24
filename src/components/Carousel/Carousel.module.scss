@@ -1,0 +1,23 @@
+@import "../../styles/mixins";
+
+.wrapper {
+  position: absolute;
+  top: 143px;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.carousel {
+  position: relative;
+  width: 530px;
+  height: 530px;
+  border: 1px solid rgba(66, 86, 122, 0.2);
+  border-radius: 50%;
+  transform-origin: 50% 50%;
+  transition-duration: 2s;
+
+  @include media-1440px {
+    width: 400px;
+    height: 400px;
+  }
+}

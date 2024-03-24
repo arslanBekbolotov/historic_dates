@@ -27,6 +27,29 @@ body{
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 15px;
+
+  .horizontalLine, .verticalLine {
+    position: absolute;
+    background-color: #42567A;
+    opacity: 0.1;
+
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+
+  .verticalLine {
+    width: 1px;
+    height: 100vh;
+    left: 50%;
+  }
+
+  .horizontalLine {
+    width: 100vw;
+    height: 1px;
+    top: 50%;
+    transform:translateY(-50%);
+  }
 }
 
 .flexbox{

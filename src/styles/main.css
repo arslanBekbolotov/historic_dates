@@ -28,6 +28,27 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
+.container .horizontalLine, .container .verticalLine {
+  position: absolute;
+  background-color: #42567A;
+  opacity: 0.1;
+}
+@media (max-width: 600px) {
+  .container .horizontalLine, .container .verticalLine {
+    display: none;
+  }
+}
+.container .verticalLine {
+  width: 1px;
+  height: 100vh;
+  left: 50%;
+}
+.container .horizontalLine {
+  width: 100vw;
+  height: 1px;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
 .flexbox {
   display: flex;
