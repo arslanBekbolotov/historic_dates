@@ -1,3 +1,5 @@
+@import "mixins";
+
 :root {
   --font-family: "PT Sans", sans-serif;
   --second-family: "Bebas Neue", sans-serif;
@@ -23,33 +25,32 @@ body{
   color: var(--primary-color);
 }
 
-.container {
+.main-wrapper {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 15px;
+  border: 1px solid rgba(#42567A, 0.1);
+  position: relative;
+}
 
-  .horizontalLine, .verticalLine {
-    position: absolute;
-    background-color: #42567A;
-    opacity: 0.1;
+.vertical_line {
+  position: absolute;
+  background-color: var(--primary-color);
+  opacity: 0.1;
+  width: 1px;
+  height: 100%;
+  left: 50%;
 
-    @media (max-width: 600px) {
-      display: none;
-    }
+  @include media-600px {
+    display: none;
   }
+}
 
-  .verticalLine {
-    width: 1px;
-    height: 100vh;
-    left: 50%;
-  }
+.main-title{
+  padding-top: 170px;
+}
 
-  .horizontalLine {
-    width: 100vw;
-    height: 1px;
-    top: 50%;
-    transform:translateY(-50%);
-  }
+.periods_section{
+  padding-bottom: 104px;
 }
 
 .flexbox{

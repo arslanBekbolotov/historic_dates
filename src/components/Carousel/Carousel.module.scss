@@ -1,10 +1,26 @@
 @import "../../styles/mixins";
 
-.wrapper {
-  position: absolute;
-  top: 143px;
-  right: 50%;
-  transform: translateX(50%);
+.carousel_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: -45px;
+
+  .centered_content, .horizontal_line{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .horizontal_line{
+    width: 100vw;
+    max-width: 1440px;
+    height: 1px;
+    background-color: var(--primary-color);
+    opacity: 0.1;
+  }
 }
 
 .carousel {

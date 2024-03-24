@@ -5,6 +5,7 @@ import CarouselItem from "./Item/CarouselItem";
 import { getRotation } from "../../utils/getRotation";
 import { getArrayForward } from "../../utils/getArrayForward";
 import { getArrayBack } from "../../utils/getArrayBack";
+import Interval from "../Interval/Interval";
 
 interface Props {
   periods: IDateInterval[];
@@ -63,7 +64,14 @@ const Carousel: React.FC<Props> = ({
   }, [currentRotation, currentPeriod, periods.length]);
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.carousel_wrapper}>
+      <div className={styles.centered_content}>
+        <span className={styles.horizontal_line} />
+        <div>
+          <Interval period={periods[currentPeriod]} />
+        </div>
+      </div>
+
       <div
         className={styles.carousel}
         style={{ transform: `rotate(${currentRotation}deg)` }}

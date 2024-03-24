@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Title from "./components/Title/Title";
-import Interval from "./components/Interval/Interval";
 import CarouselPagination from "./components/Carousel/Pagination/CarouselPagination";
 import Carousel from "./components/Carousel/Carousel";
 import { periodsData } from "./data/historic-dates";
+import Periods from "./components/Periods/Periods";
 
 function App() {
   const periods = periodsData;
@@ -22,22 +22,25 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <div className="container">
-        <div className="verticalLine"></div>
-        <div className="horizontalLine"></div>
+    <div className="main-wrapper">
+      <span className="vertical_line" />
+      <div className="main-title">
         <Title />
-        <Interval period={periods[currentPeriod]} />
+      </div>
+      <Carousel
+        periods={periods}
+        handleClickDate={handleClickDate}
+        currentPeriod={currentPeriod}
+      />
+      <div style={{ padding: "0 5%", margin: "-40px 0 56px" }}>
         <CarouselPagination
           currentPeriod={currentPeriod}
           moveToNextDate={moveToNextDate}
           moveToPreviousDate={moveToPreviousDate}
         />
-        <Carousel
-          periods={periods}
-          handleClickDate={handleClickDate}
-          currentPeriod={currentPeriod}
-        />
+      </div>
+      <div className="periods_section">
+        <Periods currentPeriod={currentPeriod} />
       </div>
     </div>
   );
