@@ -13,7 +13,7 @@ const Periods: React.FC<Props> = ({ currentPeriod }) => {
     <div style={{ overflow: "hidden" }}>
       <Slider>
         {eventsData[currentPeriod].map((periodInfo, index) => (
-          <SwiperSlide key={index} style={{ maxWidth: "400px" }}>
+          <SwiperSlide key={index} className={styles.slide}>
             <p className={styles.year}>{periodInfo.year}</p>
             <p className={styles.event}>{periodInfo.event}</p>
           </SwiperSlide>

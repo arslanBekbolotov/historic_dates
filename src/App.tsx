@@ -4,6 +4,7 @@ import CarouselPagination from "./components/Carousel/Pagination/CarouselPaginat
 import Carousel from "./components/Carousel/Carousel";
 import { periodsData } from "./data/historic-dates";
 import Periods from "./components/Periods/Periods";
+import Interval from "./components/Interval/Interval";
 
 function App() {
   const periods = periodsData;
@@ -27,12 +28,17 @@ function App() {
       <div className="main-title">
         <Title />
       </div>
-      <Carousel
-        periods={periods}
-        handleClickDate={handleClickDate}
-        currentPeriod={currentPeriod}
-      />
-      <div style={{ padding: "0 5%", margin: "-40px 0 56px" }}>
+      <div className="interval-sm">
+        <Interval period={periods[currentPeriod]} />
+      </div>
+      <div className="carousel">
+        <Carousel
+          periods={periods}
+          handleClickDate={handleClickDate}
+          currentPeriod={currentPeriod}
+        />
+      </div>
+      <div className="carousel_pagination">
         <CarouselPagination
           currentPeriod={currentPeriod}
           moveToNextDate={moveToNextDate}

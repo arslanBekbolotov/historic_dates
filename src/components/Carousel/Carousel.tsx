@@ -1,11 +1,11 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import styles from "./Carousel.module.scss";
-import { IDateInterval } from "../../types";
 import CarouselItem from "./Item/CarouselItem";
 import { getRotation } from "../../utils/getRotation";
 import { getArrayForward } from "../../utils/getArrayForward";
 import { getArrayBack } from "../../utils/getArrayBack";
 import Interval from "../Interval/Interval";
+import { IDateInterval } from "../../types";
+import styles from "./Carousel.module.scss";
 
 interface Props {
   periods: IDateInterval[];
@@ -65,11 +65,9 @@ const Carousel: React.FC<Props> = ({
 
   return (
     <div className={styles.carousel_wrapper}>
-      <div className={styles.centered_content}>
-        <span className={styles.horizontal_line} />
-        <div>
-          <Interval period={periods[currentPeriod]} />
-        </div>
+      <span className={styles.horizontal_line} />
+      <div className={styles.interval}>
+        <Interval period={periods[currentPeriod]} />
       </div>
 
       <div

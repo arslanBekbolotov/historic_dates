@@ -7,11 +7,15 @@
   position: relative;
   margin-top: -45px;
 
-  .centered_content, .horizontal_line{
+  .interval, .horizontal_line{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+  }
+
+  .interval{
+    z-index: 5;
   }
 
   .horizontal_line{

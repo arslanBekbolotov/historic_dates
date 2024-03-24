@@ -30,6 +30,12 @@ body{
   margin: 0 auto;
   border: 1px solid rgba(#42567A, 0.1);
   position: relative;
+  overflow: hidden;
+
+  @include media-600px{
+    border: none;
+    height: 100vh;
+  }
 }
 
 .vertical_line {
@@ -47,6 +53,39 @@ body{
 
 .main-title{
   padding-top: 170px;
+
+  @include media-1100px{
+    padding-top: 56px;
+  }
+}
+
+.interval-sm{
+  display: none;
+
+  @include media-600px{
+    display: block;
+    padding: 20px;
+  }
+}
+
+.carousel{
+  @include media-600px{
+    display: none;
+  }
+}
+
+.carousel_pagination{
+  padding: 0 5%;
+  margin: -40px 0 56px;
+
+  @include media-600px{
+    margin-top: 0;
+  }
+
+  @include media-425px{
+    position: absolute;
+    bottom: 15px;
+  }
 }
 
 .periods_section{
@@ -58,4 +97,34 @@ body{
   align-items: center;
   justify-content: space-between;
 }
+
+.swiper-slide-next {
+  @include media-425px{
+    opacity: .30;
+  }
+}
+
+.swiper-slide-active {
+  @include media-425px{
+    opacity: 1;
+  }
+}
+
+.swiper-slide{
+  margin-right: 80px;
+
+  @include media-600px{
+    margin-right: 25px;
+  }
+}
+
+.swiper-pagination{
+  display: none;
+
+  @include media-425px{
+    display: block;
+    bottom: 5px !important;
+  }
+}
+
 

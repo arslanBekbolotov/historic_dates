@@ -1,3 +1,5 @@
+@import "../../styles/mixins";
+
 .date_interval{
   font-weight: 700;
   font-size: 200px;
@@ -6,6 +8,20 @@
   display: flex;
   justify-content: center;
   gap: 10%;
+
+  @include media-1100px{
+    font-size: 150px;
+  }
+
+  @include media-870px{
+    font-size: 80px;
+  }
+
+  @include media-425px{
+    font-size: 56px;
+    padding-bottom: 57px;
+    border-bottom:1px solid rgba(66, 86, 122, 0.2) ;
+  }
 
   .start{
     color: #5d5fef;

@@ -1,3 +1,13 @@
+@import "../../styles/mixins";
+
+.slide{
+  max-width: 400px;
+
+  @include media-600px{
+    max-width: 166px;
+  }
+}
+
 .year{
   font-family: var(--second-family);
   font-weight: 400;

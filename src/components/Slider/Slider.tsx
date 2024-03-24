@@ -2,14 +2,16 @@ import React, { PropsWithChildren } from "react";
 import { Navigation, EffectFade, Pagination } from "swiper/modules";
 import { Swiper } from "swiper/react";
 import styles from "./Slider.module.scss";
+import "swiper/css/pagination";
 import "swiper/css";
 
 const Slider: React.FC<PropsWithChildren> = ({ children }) => {
   return (
     <Swiper
       slidesPerView={"auto"}
-      spaceBetween={80}
-      pagination={false}
+      pagination={{
+        clickable: true,
+      }}
       navigation={{
         nextEl: "#button_forward",
         prevEl: "#button_back",

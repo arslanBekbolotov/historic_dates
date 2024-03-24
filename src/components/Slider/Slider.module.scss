@@ -1,3 +1,5 @@
+@import "../../styles/mixins";
+
 .slider_buttons{
   button{
     position: absolute;
@@ -21,6 +23,11 @@
     &:disabled{
       visibility: hidden;
     }
+
+    @include media-600px{
+      display: none;
+    }
+
   }
 
   .button_back {
@@ -28,6 +35,10 @@
 
     &:disabled{
       visibility: hidden;
+    }
+
+    @include media-600px{
+      display: none;
     }
   }
 }

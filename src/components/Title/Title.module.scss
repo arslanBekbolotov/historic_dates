@@ -1,3 +1,5 @@
+@import "../../styles/mixins";
+
 .title{
   font-weight: 700;
   font-size: 56px;
@@ -16,5 +18,20 @@
     top: 50%;
     transform: translateY(-50%);
     background-image: linear-gradient(to bottom, #3877EE, #EF5DA8);
+
+    @include media-600px{
+      display: none;
+    }
+  }
+
+  @include media-600px{
+    max-width: 300px;
+    font-size: 40px;
+    margin-bottom: 56px;
+  }
+
+  @include media-425px{
+    max-width: 100px;
+    font-size: 20px;
   }
 }
